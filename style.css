@@ -1,0 +1,263 @@
+@charset "UTF-8";
+:root {
+    /*color-scheme*/
+    --color0: lightgray;
+    --color1: #3853C9;
+    --color2: #47579F;
+    --color3: #475074;
+    --color4: #3A3D4A;
+    --color5: #2B2D33;
+    --color6: #2B2D33;
+
+    /*font-scheme*/
+    --montfont: 'Mont';
+}
+
+@font-face {
+    font-family: Mont;
+    src: url(fonts/Montserrat-ThinItalic.ttf) format(truetype);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body>header {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--color1);
+}
+
+header>img {
+    width: 200px;
+    max-width: 100%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.062);
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    background-color: var(--color1);
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.315);
+    padding: 20px;
+}
+
+nav a {
+    font-family: var(--montfont);
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    background-color: #47579F;
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #5268c7;
+    transform: scale(1.05);
+}
+
+/*Banner-conteiner*/
+.banner-conteiner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 25px;
+    background-color: var(--color3);
+}
+
+.banner-conteiner img {
+    padding: 5px;
+    width: 1080px;
+    height: 390px;
+    border-radius: 100px;
+    box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.356);
+}
+
+.banner-conteiner img:hover {
+    transform: scale(0.9);
+    transition: ease-in-out 0.3s;
+}
+
+button {
+    padding: 10px;
+    color: yellow;
+    background-color: rgba(0, 0, 80, 0.527);
+    border-radius: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+button:hover:active {
+    transform: scale(1);
+}
+
+/*Oferta settings*/
+.offermaincont {
+    background-color: var(--color1);
+    padding: 3px;
+}
+
+.weeklyofferscont {
+    background-color: var(--color1);
+    width: 200px;
+    height: 35px;
+    max-width: 90%;
+    border-radius: 0px 50px 0px 50px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.616);
+    padding: 5px;
+}
+
+.weeklyofferscont span {
+    display: block;
+    margin-left: 60px;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 20px;
+    color: white;
+}
+
+/*Cards Settings*/
+.mainconteiner {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color1);
+}
+
+.cardconteiner {
+    display: flex;
+    gap: 10px;
+}
+
+.card {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.card img {
+    width: 400px;
+    height: 300px;
+    border-radius: 16px;
+}
+
+/* =============================
+   🔹 Responsividade adicionada
+   ============================= */
+
+@media (max-width: 1024px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .banner-conteiner img {
+        width: 90%;
+        height: auto;
+        border-radius: 50px;
+    }
+
+    .card img {
+        width: 300px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 80%;
+        text-align: center;
+    }
+
+    .banner-conteiner img {
+        width: 95%;
+        height: auto;
+        border-radius: 40px;
+    }
+
+    .cardconteiner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card img {
+        width: 90%;
+        height: auto;
+    }
+
+    .weeklyofferscont span {
+        margin-left: 20px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    header>img {
+        width: 150px;
+    }
+
+    nav {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .banner-conteiner img {
+        border-radius: 25px;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .weeklyofferscont span {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+footer{
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: var(--color5);
+}
+
+footer strong{
+    text-decoration: underline;
+    font-family: var(--montfont);
+    color: var(--color1) ;
+}
+
+footer::after{
+    color: #3853C9;
+    content: 'Término 25/10/2025';
+}
