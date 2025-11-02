@@ -4,47 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 1/10</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="navflexbox.css">
 </head>
 
 <body>
-    <header>
-        <img src="logo/logo.webp" alt="Logo Azulado com joystick">
-    </header>
-    <nav>
-        <a href="#">Playstation</a>
-        <a href="#">X-box</a>
-        <a href="#">Jogos de PC/Mobile</a>
-        <a href="#">Ofertas</a>
-    </nav>
-    <main>
-        <!--MAIN IMG-->
-        <section>
-            <div class="banner-conteiner">
-                <div class="banner"><img src="assets/Main Banner.webp" alt="Jogo de Guerra Battlefield 6">
-                    <button>Compre uma Key!</button>
-                </div>
-            </div>
-        </section>
-        <!------------------------------->
-        <!--Ofertas-->
-        <section class="offermaincont">
-            <div class="weeklyofferscont">
-                <span>Ofertas</span>
-            </div>
-        </section>
+    <header class="navbar-flex-container"> <!--SEMANTIC DIV-->
+        <h1>Welcome to Flexbox</h1>
 
-        <section class="mainconteiner">
-            <div class="cardconteiner">
-                <div class="card"><img src="assets/Gamepass.jpg" alt="Gamepass card"></div>
-                <div class="card"><img src="assets/PSNGIFTCARD.png" alt="Playstation Gift Card"></div>
-                <div class="card"><img class="steamimg" src="assets/SteamGC.jpg" alt="Steam Gift card"></div>
-            </div>
-        </section>
+        <nav class="navbar-container-nested">
+            <a href="#">Home</a>
+            <a href="#">Store</a>
+            <a href="#">Contact</a>
+            <a href="#">About us</a>
+        </nav>
+    </header>
+    <main class="main-flex-container">
+        <div class="flexcard-nested-container">
+            <div class="flex-card"></div>
+            <div class="flex-card"></div>
+            <div class="flex-card"></div>
+        </div>
     </main>
     <footer>
-        <p>&copy; 24/10/2025 by <strong>DevRamos</strong></p>
+        <span>&copy; 02/11/2025 by <strong>DevRamos</strong></span>
     </footer>
 </body>
 
